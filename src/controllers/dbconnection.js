@@ -1,24 +1,6 @@
-// // dbconnection.js
-// const mysql = require("mysql")
-
-// const con = mysql.createConnection({
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'root',
-//     database: 'crud_db1'
-// })
-
-// con.connect((err) => {
-//     if (err) throw err;
-//     console.log("Connected to MySQL!");
-// });
-
-// module.exports = con;
-
-
 // dbconnection.js
 require('dotenv').config();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const con = mysql.createConnection({
     host: process.env.DB_HOST,
